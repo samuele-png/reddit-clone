@@ -1,46 +1,22 @@
 import { Link } from "react-router-dom";
 import "../assets/App.css";
 import PostList from "../components/postList/PostList";
-const data= [ 
-  {
-  userId: "username1  ",
-  postId: "1",
-  content: "Lorem Ipsum",
-  subreddit: "testReddit"
-},
- {
-  userId: "username2",
-  postId: "2",
-  content: "Lorem Ipsum",
-  subreddit: "testReddit"
-},
+import NewPostForm from "../parts/newPostForm/NewPostForm"
+import { useSelector } from "react-redux";
+import { selectPosts } from "../store/posts/selectors";
+import { useDispatch } from "react-redux";
 
-{
-  userId: "username3",
-  postId: "3",
-  content: "Lorem Ipsum",
-  subreddit: "testReddit"
-},
-
- {
-  userId: "username4",
-  postId: "4",
-  content: "Lorem Ipsum",
-  subreddit: "testReddit"
-},
-
- {
-  userId: "username5",
-  postId: "5",
-  content: "Lorem Ipsum",
-  subreddit: "testReddit"
-}]
-
-
-export default function FrontPage() {
+export default function FrontPage() { 
+const posts = useSelector(selectPosts);
+console.log(posts)
   return (
-    <div>{data.map((e) => (<PostList key={e.postId} userId={e.userId} postId={e.postId} content={e.content} subreddit={e.subreddit}/>))}
+    <div>
+          <NewPostForm/>
+{posts && posts.map((e) => (<PostList key={e.postId} userId={e.userId} postId={e.postId} content={e.content} subId={e.subId}/>))}
   
+   
+
+
    
     </div>
   );

@@ -6,10 +6,11 @@ import PostBlock from "../../components/postBlock/PostBlock";
 import CommentBlock from "../commentBlock/CommentBlock"
 import NewCommentForm from "../../parts/newCommentForm/NewCommentForm"
 export default function PostPage(props) {
+ const state = props.location.state.props
+  
   return (
     <div>
-     
-      {props.id,props.subreddit} diocane
+ {state.userId} {state.subId} {state.content} {state.postId}
     </div>
   );
 }
