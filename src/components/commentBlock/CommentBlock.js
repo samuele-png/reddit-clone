@@ -1,9 +1,15 @@
 import { NavLink } from "react-router-dom";
 import "../../assets/App.css";
-export default function CommentForm(props) {
+export default function CommentBlock(props) {
   return (
-    <div class="Comment">
-    MY COMMENT MY COMMENT MY COMMENT
+    <div className="PostBlock">
+
+      COMMENT BLOCK
+
+      postId:{props.postId} content{props.content}
+      <br />
+      <br />
+      
     </div>
   );
 }

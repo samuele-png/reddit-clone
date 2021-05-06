@@ -32,7 +32,7 @@ export default function NewPostForm() {
   return (
     <div>
        <form onSubmit={submit }>
-        <h2>Add a new team!</h2>
+        <h2>Add a new POST!</h2>
         <p>
           <label>
             postId:{" "}
@@ -63,7 +63,7 @@ export default function NewPostForm() {
             />
           </label>
         </p>
-        <button type="submit">Add this team!</button>
+        <button type="submit">Add this POST!</button>
         
       </form>
 

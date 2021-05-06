@@ -4,7 +4,7 @@ export default function NewReplyForm() {
   return (
     <div>
       <input
-        class="New Reply"
+        className="New Reply"
         text
         value="NEW REPLY"
       ></input>

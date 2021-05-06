@@ -8,6 +8,7 @@ import PostPage from "./components/postPage/PostPage";
 import { Fragment } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import UserDetails from "./pages/UserDetails";
+
 function App() {
   return (
     <div className="App">
@@ -19,12 +20,9 @@ function App() {
           <Switch>
             <Route exact path="/" component={FrontPage} />
             <Route exact path="/r/:subId" component={FrontPage} />
-            <Route path="/r/:subId/:postId" component={PostPage} />
-            <Route exact
-              path="/r/:subId/:postId/:commentId"
-              component={PostPage}
-            />
-            <Route path="/u/:userId" component={UserDetails} />
+            <Route exact path="/r/:subId/:postId" component={PostPage} />
+            <Route exact path="/r/:subId/:postId/:commentId" component={PostPage} />
+            <Route exact path="/u/:userId" component={UserDetails} />
           </Switch>
         </Fragment>
       </Router>

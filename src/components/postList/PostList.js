@@ -7,7 +7,6 @@ import PostBlock from "../../components/postBlock/PostBlock";
 import {selectPosts} from "../../store/posts/selectors"
 export default function PostList(props) {
   const posts = useSelector(selectPosts);
-  const dispatch = useDispatch();
   return (
     <div>
       <PostBlock
